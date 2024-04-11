@@ -7,7 +7,7 @@
   name = "Spec"
   weight = 20
   identifier = "specification"
-  url = "/docs/cli/spec/spec"
+  url = "/docs/cli/spec/specification"
 
 [[main]]
   name = "Project"

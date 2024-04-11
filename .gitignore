@@ -3,3 +3,4 @@ resources/
 .hugo_build.lock
 ocm-cli/
 ocm-spec/
+public/

@@ -1,13 +1,2 @@
-{{/* Put your custom <script></script> tags here */}}
-
-{{/* EXAMPLE - only load script for production
-{{ if eq (hugo.Environment) "production" -}}
-  {{ partial "footer/esbuild" (dict "src" "js/instantpage.js" "load" "async" "transpile" false) -}}
-{{ end -}}
-*/}}
-
-{{/* EXAMPLE - only load script for a page type e.g. contact or gallery
-{{ if eq .Type "gallery" -}}
-  {{ partial "footer/esbuild" (dict "src" "js/gallery.js" "load" "async" "transpile" false) -}}
-{{ end -}}
-*/}}
+<!-- The script tag should live in the head of your page if at all possible -->
+<script type="text/javascript" async src="https://play.vidyard.com/embed/v4.js"></script>
