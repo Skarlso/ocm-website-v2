@@ -2,12 +2,21 @@
 <section class="section container-fluid mt-n3 pb-3">
   <div class="row justify-content-center">
     <div class="col-lg-12 text-center">
-      <h1>{{ .Title }}</h1>
+      <img src="images/logo-image.png" height="auto" width="150px" alt="Open Component Model Logo"/>
+      <img src="images/ocm-text.png" height="auto" width="200px" alt="Open Component Model Logo"/>
+      </p>
     </div>
     <div class="col-lg-9 col-xl-8 text-center">
       <p class="lead">{{ .Params.lead | safeHTML }}</p>
-      <a class="btn btn-primary btn-cta rounded-pill btn-lg my-3" href="/docs/{{ if site.Params.doks.docsVersioning }}{{ site.Params.doks.docsVersion }}/{{ end }}overview/context" role="button">{{ i18n "get_started" }}</a>
+      <p class="text-white leader-open-source-text">{{.Site.Params.leader_open_source_text}} <a href="https://github.com/open-component-model/ocm/releases/tag/{{ .Site.Params.latest_version }}">GitHub {{ .Site.Params.latest_version }}</a>
+      <p class="mb-4">
+        <a href="https://bestpractices.coreinfrastructure.org/projects/7156"><img src="https://bestpractices.coreinfrastructure.org/projects/7156/badge"></a>
+      </p>
+      <p>
+        <a class="btn btn-primary btn-cta rounded-pill btn-lg my-3" href="/docs/{{ if site.Params.doks.docsVersioning }}{{ site.Params.doks.docsVersion }}/{{ end }}overview/context" role="button">{{ i18n "get_started" }}</a>
+      </p>
       {{ .Content }}
+      <!-- <p class="sub-leader mt-2">{{ .Site.Params.leader }}</p> -->
     </div>
   </div>
 </section>
@@ -20,18 +29,20 @@
   </div>
   {{ end -}}
   {{ if eq $.Site.Language.LanguageName "English" }}
+
   <section class="section section-md section-features">
     <div class="container">
       <div class="row justify-content-center text-center">
-        <section class="section section-what-is">
-          <div class="what-is">
-            <h1>Yet another SBOM?</h1>
-            <p>Although OCM may seem similar to both package management tools and SBOM, it is actually neither.</p>
-            <br>
-            <p>An SBOM describes the constituent parts of a software product required during the development process. In contrast, OCM describes those parts necessary for delivery and deployment. We think of this as a Software Bill of Delivery (SBOD).</p>
-          </div>
+        <section class="section container-fluid mt-n3 pb-3">
+            <h1>What is the Open Component Model?</h1>
+            <p>The Open Component Model (OCM) is an open standard to describe Software Bills of Delivery (SBOD). It is a technology-agnostic and machine-readable format and focuses on software artifacts that need to be delivered securely across boundaries. At the same time, it maintains integrity and provenance along the supply chain.</p>
         </section>
       </div>
+    </div>
+  </section>
+
+  <section class="section section-md section-features">
+    <div class="container">
       <div class="row justify-content-center text-center">
         <div class="col-lg-5">
           <img src="images/describe-test.png"/>
@@ -50,20 +61,41 @@
           <p>Leverage built-in Flux integration to seamlessly automate the deployment of components via GitOps</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
       <div class="row justify-content-center text-center">
-        <h1>Deploying to Airgap with Flux & OCM</h1>
-        <img
-          style="width: 100%; margin: auto; display: block;"
-          class="vidyard-player-embed"
-          src="https://play.vidyard.com/NjNrZF2926RUTSUvkU4MdR.jpg"
-          data-uuid="NjNrZF2926RUTSUvkU4MdR"
-          data-v="3"
-          data-type="inline"
-        />
-        <p>Try it yourself <a href="https://github.com/open-component-model/demo-secure-delivery" target="_blank">here</a>.
+        <section class="section container-fluid mt-n3 pb-3">
+            <h1>Yet another SBOM?</h1>
+            <p>Although OCM may seem similar to both package management tools and SBOM, it is actually neither.</p>
+            <br>
+            <p>An SBOM describes the constituent parts of a software product required during the development process. In contrast, OCM describes those parts necessary for delivery and deployment. We think of this as a Software Bill of Delivery (SBOD).</p>
+        </section>
       </div>
     </div>
   </section>
+
+  <section>
+    <div class="container">
+      <div class="row justify-content-center text-center">
+        <section class="section container-fluid mt-n3 pb-3">
+          <h1>Deploying to Airgap with Flux & OCM</h1>
+          <img
+            style="width: 100%; margin: auto; display: block;"
+            class="vidyard-player-embed"
+            src="https://play.vidyard.com/NjNrZF2926RUTSUvkU4MdR.jpg"
+            data-uuid="NjNrZF2926RUTSUvkU4MdR"
+            data-v="3"
+            data-type="inline"
+          />
+          <p>Try it yourself <a href="https://github.com/open-component-model/demo-secure-delivery" target="_blank">here</a>.
+        </section>
+      </div>
+    </div>
+  </section>
+
   {{ end }}
 {{ end }}
 

@@ -22,7 +22,7 @@ Ready to contribute directly to OCM? Whether adding code, writing tests, or assi
 
 Join [#open-component-model](https://kubernetes.slack.com/archives/C05UWBE8R1D) on Kubernetes Slack and talk to us and other community members.
 
-(Note: If you aren't already a member on the Kubernetes Slack workspace, please request an invitation.)
+{{<callout context="note" title="Kubernetes Slack Membership">}}If you aren't already a member on the Kubernetes Slack workspace, please request an invitation.{{</callout>}}
 
 Our team is passionate about delving into diverse deployment processes, exploring patterns, aiding in design, and troubleshooting issues. Who knows? Your inquiry might inspire the development of the next OCM feature!
 

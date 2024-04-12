@@ -286,12 +286,12 @@ configuration of credentials for the OCM CLI):
 ocm transfer ctf -f <ctf-target-dir> <oci-repo-url>
 ```
 
-Note: Be careful with the `-f` or `--overwrite` flag. This will replace existing component
+{{<callout context="danger" title="-f replaces existing component">}}Be careful with the `-f` or `--overwrite` flag. This will replace existing component
 versions in the OCI registry. During development it is useful being able to overwrite
 existing component versions until something is ready for release. **For released versions
 you should never use this flag**! Released component versions should be immutable and
 should never be overwritten. They serve as source of truth for what the release is made of
-und should never be changed.
+und should never be changed.{{</callout>}}
 
 ## Deploying Software
 

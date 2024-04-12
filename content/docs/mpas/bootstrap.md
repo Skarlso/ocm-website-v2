@@ -35,9 +35,9 @@ the installed components from the target Git repository.
 After the `mpas bootstrap` command is executed, the cluster is ready to deploy software
 in a GitOps fashion using the Open Component Model and `MPAS`.
 
-**NOTE:** To bootstrap `MPAS`, the person running the command must have **cluster admin rights** for the target Kubernetes cluster.
+{{<callout context="note" title="Cluster Admin Rights">}}To bootstrap `MPAS`, the person running the command must have **cluster admin rights** for the target Kubernetes cluster.
 It is also required that the person running the command to be the **owner** of the GitHub repository,
-or to have admin rights of a GitHub organization.
+or to have admin rights of a GitHub organization.{{</callout>}}
 
 ## Bootstrap for GitHub
 
@@ -55,9 +55,9 @@ export GITHUB_TOKEN=<your-github-pat>
 If the `GITHUB_TOKEN` environment variable is not set, the `mpas bootstrap` command will prompt
 for the GitHub PAT.
 
-**NOTE:**
+{{<callout context="danger" title="Token in Secret">}}
 Note that the GitHub PAT is stored in the cluster as a **Kubernetes Secret** named `flux-system`
-inside the `flux-system` namespace.
+inside the `flux-system` namespace.{{</callout>}}
 
 ### Personal account
 
@@ -108,9 +108,9 @@ export GITEA_TOKEN=<your-gitea-api-token>
 If the `GITEA_TOKEN` environment variable is not set, the `mpas bootstrap` command will prompt
 for the Gitea API token.
 
-**NOTE:**
+{{<callout context="danger" title="Token in Secret">}}
 Note that the Gitea API Token is stored in the cluster as a **Kubernetes Secret** named `flux-system`
-inside the `flux-system` namespace.
+inside the `flux-system` namespace.{{</callout>}}
 
 ### Personal account
 
